@@ -47,14 +47,19 @@ chcp 65001
 @echo off
 taskkill /f /im GOD.exe
 
-if exist .\tmp (
+if exist "%DOCUMENTSDIR%\autoGOD\tmp" (
 
     @echo 更新檔案中...
     @echo off
 
-    del .\tmp\GOD.zip
-    xcopy /s .\tmp\* .\ /y
-    rmdir /s/q .\tmp
+    if exist "%DOCUMENTSDIR%\autoGOD\tmp\GOD.zip" (
+        del "%DOCUMENTSDIR%\autoGOD\tmp\GOD.zip")
+    if exist ".\config\config.ini" (
+        if exist "%DOCUMENTSDIR%\autoGOD\tmp\config\config.ini" (
+            del "%DOCUMENTSDIR%\autoGOD\tmp\config\config.ini"))
+    xcopy /s "%DOCUMENTSDIR%\autoGOD\tmp"\* .\ /y
+
+    rmdir /s/q "%DOCUMENTSDIR%\autoGOD\tmp"
 
     @echo 更新完畢!
     @echo off
