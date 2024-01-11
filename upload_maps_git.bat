@@ -1,6 +1,6 @@
 @echo off
 
-set /p commit_msg="Please enter your commit message: "
+set commit_msg="自動上傳測試2"
 
 git add .
 git commit -m "%commit_msg%"
