@@ -2,7 +2,7 @@
 
 
 git add .
-git commit -m "¤W¶Ç´ú¸Õ4"
+git commit -m "maps update"
 git push
 
 pause
