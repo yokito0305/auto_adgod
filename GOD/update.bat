@@ -65,7 +65,7 @@ if exist "%DOCUMENTSDIR%\autoGOD\tmp" (
     @echo off
 
 ) else (
-    @echo 發生錯誤
+    @echo 發生錯誤，找不到更新檔案!
     @echo off
     pause
 )
